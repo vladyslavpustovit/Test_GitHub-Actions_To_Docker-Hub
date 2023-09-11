@@ -14,4 +14,4 @@ COPY . .
 EXPOSE 1337
 
 # Run Node.js application
-CMD ["node", "app.js"]
+CMD ["node", "expressExample.js"]
