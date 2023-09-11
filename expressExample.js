@@ -23,7 +23,7 @@ router.post("/api", (req, res) => {
     res.json({ message: "POST REQUEST SUCCESS.", data: requestData });
 });
 
-ATTEMPT #2 TO FAIL THE BUILD AND PREVENT CHANGES IN THE GITHUB REPO
+// ATTEMPT #2 TO FAIL THE BUILD AND PREVENT CHANGES IN THE GITHUB REPO
 
 const PORT = 1337;
 app.listen(PORT, (err) => {
