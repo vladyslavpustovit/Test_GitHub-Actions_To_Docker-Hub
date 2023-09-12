@@ -1,4 +1,4 @@
-name: Build Push Docker Image
+name: Build Image and Check
 
 on:
   pull_request:

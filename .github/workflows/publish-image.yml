@@ -1,8 +1,6 @@
-name: Build image and Check
+name: Build, Login and Push
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
     types:
