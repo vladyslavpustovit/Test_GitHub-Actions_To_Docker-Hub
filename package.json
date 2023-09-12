@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "node expressExample.js",
-    "dev": "nodemon expressExample.js"
+    "dev": "nodemon expressExample.js",
+    "lint": "eslint . --quiet --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "eslint": "^8.49.0"
   },
   "dependencies": {
     "cors": "^2.8.5",
