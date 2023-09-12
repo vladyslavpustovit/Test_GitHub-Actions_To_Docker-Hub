@@ -37,6 +37,15 @@ jobs:
         run: |
           docker run -d --name my-app vladpustovit/github-actions-test:${{ env.APP_VERSION }}
 
+      - name: Check Container Health
+        run: |
+          if docker ps -f "name=my-app" | grep -q "my-app"; then
+            echo "Container is running."
+          else
+            echo "Container is not running."
+            exit 1
+          fi
+
       - name: Push Docker Image
         run: |
           docker push vladpustovit/github-actions-test:${{ env.APP_VERSION }}
