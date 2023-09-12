@@ -5,6 +5,10 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+    types:
+      - opened  # Trigger the workflow when a pull request is opened
+      - synchronize  # Trigger the workflow when a pull request is synchronized (updated)
+      - closed  # Trigger the workflow when a pull request is closed
 
 jobs:
   build:
@@ -48,9 +52,9 @@ jobs:
           fi
 
       - name: Push Docker Image
+        if: github.event_name == 'pull_request' && github.event.action == 'closed'
         run: |
           docker push vladpustovit/github-actions-test:${{ env.APP_VERSION }}
-
 
 
 #name: Build and Push Docker Image
