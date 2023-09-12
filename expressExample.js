@@ -1,12 +1,11 @@
+const express = require('express');
 const cors = require('cors');
 const router = express.Router();
-fdafaega
 const app = express();
 require('dotenv').config();
 
 app.use(cors({
     origin: '*'
-    dfafagdaegage
 }))
 
 app.use(express.json());
@@ -18,8 +17,6 @@ router.get("/api", (req, res)=>{
 });
 
 // POST route for testing
-
-dfafaega
 router.post("/api", (req, res) => {
     const requestData = req.body;
     // You can do something with the posted data here
