@@ -4,14 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Website</title>
+    <style>
+        body {
+            background: darkslategray;
+            color: white;
+            font-family: Calibri, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            text-align: center;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
 </head>
-<body style="background: darkslategray; color: white; font-family: Calibri">
-<h1>Welcome to My Website</h1>
-<p>This is a simple welcome page.</p>
-<div id="userInput">
-    <!-- Placeholder for user input -->
-    <h3>Your Input:</h3>
-    {userData}
+<body>
+<header>
+    <h1>Welcome to My Website</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <div id="userInput" style="border: 1px solid white; padding: 10px; margin-top: 20px;">
+        <!-- Placeholder for user input -->
+        <h3>Your Input:</h3>
+        <p>{userData}</p>
+    </div>
+
+    <h2>About Us</h2>
+    <p>This is a simple website with a basic layout.</p>
+    <h2>Services</h2>
+    <p>We offer a variety of services to meet your needs.</p>
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us with any questions or inquiries.</p>
 </div>
 </body>
 </html>
+
